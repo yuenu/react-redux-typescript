@@ -1,18 +1,21 @@
 import React from "react";
-
-// Styles
-import "./App.css";
-
-import Home from "pages/Home";
-// import { selector } from 'actions'
+import SongList from 'SongList'
+import SongDetail from 'SongDetail'
 
 type props = {};
 
 const App: React.FC<props> = () => {
   return (
-    <>
-      <Home />
-    </>
+    <div className="ui container grid">
+      <div className="ui row"  style={{ marginTop: "20vh" }}>
+        <div className="column eight wide">
+          <SongList />
+        </div>
+        <div className="column eight wide">
+          <SongDetail />
+        </div>
+      </div>
+    </div>
   );
 };
 
